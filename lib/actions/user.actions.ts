@@ -157,6 +157,7 @@ export const createBankAccount = async ({
   accountId,
   accessToken,
   fundingSourceUrl,
+  //@ts-ignore
   shareableId,
 }: createBankAccountProps) => {
   try {
@@ -229,6 +230,7 @@ export const exchangePublicToken = async ({
       accountId: accountData.account_id,
       accessToken,
       fundingSourceUrl,
+      //@ts-ignore
       shareableId: encryptId(accountData.account_id),
     });
 
