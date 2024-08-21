@@ -38,13 +38,14 @@ export const getAccounts = async ({ userId }: getAccountsProps) => {
           id: accountData.account_id,
           availableBalance: accountData.balances.available!,
           currentBalance: accountData.balances.current!,
-          institutionId: institution.institution_id,
+          institutionId: institution.institution_id,  
           name: accountData.name,
           officialName: accountData.official_name,
           mask: accountData.mask!,
           type: accountData.type as string,
           subtype: accountData.subtype! as string,
           appwriteItemId: bank.$id,
+          //@ts-ignore
           sharaebleId: bank.shareableId,
         };
 
